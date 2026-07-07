@@ -1,13 +1,49 @@
-<?php include_once 'functions.php'; get_header(); ?>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Wellness - Ev Konforunda Profesyonel Terapi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home blog">
 
-<section id="home" class="hero-section" style="background-image: linear-gradient(rgba(17, 32, 28, 0.7), rgba(17, 32, 28, 0.5)), url('<?php echo get_template_directory_uri(); ?>/assets/hero-bg.jpg');">
+<header class="main-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <span class="logo-sub">AURA</span>
+            <span class="logo-main">WELLNESS</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html#home" class="nav-link active">Anasayfa</a>
+            <a href="index.html#about" class="nav-link">Hakkımızda</a>
+            <a href="index.html#services" class="nav-link">Hizmetlerimiz</a>
+            <a href="terapistlerimiz.html" class="nav-link">Terapistlerimiz</a>
+            <a href="terapistlerimiz.html" class="btn nav-cta cta-btn">
+                <i class="fab fa-whatsapp"></i> Randevu Al
+            </a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Menüyü Aç">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero-section" style="background-image: linear-gradient(rgba(17, 32, 28, 0.7), rgba(17, 32, 28, 0.5)), url('./assets/hero-bg.jpg');">
     <div class="container hero-container">
         <div class="hero-content">
             <span class="hero-subtitle">Ev konforunda profesyonel terapi</span>
             <h1 class="hero-title">Ruhunuzu ve Bedeninizi <br>Evinizde Şifalandırın</h1>
             <p class="hero-description">Uzman terapistlerimiz tarafından sunulan mobil masaj ve bütünsel wellness hizmetleriyle, stresinizden arının, enerjinizi tazeleyin.</p>
             <div class="hero-actions">
-                <a href="<?php echo esc_url(home_url('/terapistlerimiz/')); ?>" class="btn btn-primary">
+                <a href="terapistlerimiz.html" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> Hemen Randevu Al
                 </a>
                 <a href="#services" class="btn btn-outline">Hizmetlerimizi İncele</a>
@@ -30,6 +66,7 @@
     </div>
 </section>
 
+<!-- ABOUT SECTION -->
 <section id="about" class="section-padding">
     <div class="container about-grid">
         <div class="about-content">
@@ -47,12 +84,13 @@
         </div>
         <div class="about-img-wrapper">
             <div class="img-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/about-massage.jpg" alt="Aura Wellness Masaj" class="about-img">
+                <img src="./assets/about-massage.jpg" alt="Aura Wellness Masaj" class="about-img">
             </div>
         </div>
     </div>
 </section>
 
+<!-- SERVICES SECTION -->
 <section id="services" class="section-padding bg-alt">
     <div class="container">
         <div class="text-center">
@@ -70,7 +108,7 @@
                 <div class="service-info">
                     <span class="duration"><i class="far fa-clock"></i> 60 / 90 Dakika</span>
                 </div>
-                <a href="<?php echo esc_url(home_url('/terapistlerimiz/')); ?>" class="btn btn-card-cta">Detay ve Rezervasyon</a>
+                <a href="terapistlerimiz.html" class="btn btn-card-cta">Detay ve Rezervasyon</a>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-leaf"></i></div>
@@ -79,7 +117,7 @@
                 <div class="service-info">
                     <span class="duration"><i class="far fa-clock"></i> 60 / 90 Dakika</span>
                 </div>
-                <a href="<?php echo esc_url(home_url('/terapistlerimiz/')); ?>" class="btn btn-card-cta">Detay ve Rezervasyon</a>
+                <a href="terapistlerimiz.html" class="btn btn-card-cta">Detay ve Rezervasyon</a>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-hot-tub"></i></div>
@@ -88,12 +126,13 @@
                 <div class="service-info">
                     <span class="duration"><i class="far fa-clock"></i> 60 Dakika</span>
                 </div>
-                <a href="<?php echo esc_url(home_url('/terapistlerimiz/')); ?>" class="btn btn-card-cta">Detay ve Rezervasyon</a>
+                <a href="terapistlerimiz.html" class="btn btn-card-cta">Detay ve Rezervasyon</a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- TESTIMONIALS SECTION -->
 <section id="testimonials" class="section-padding">
     <div class="container">
         <div class="text-center">
@@ -121,4 +160,73 @@
     </div>
 </section>
 
-<?php get_footer(); ?>
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <div class="logo-main">AURA WELLNESS</div>
+            <p>Yaşam alanınızda profesyonel mobil masaj ve bütünsel sağlık hizmeti sunan spa platformu.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Hızlı Linkler</h4>
+            <ul>
+                <li><a href="index.html#home">Anasayfa</a></li>
+                <li><a href="index.html#about">Hakkımızda</a></li>
+                <li><a href="index.html#services">Hizmetlerimiz</a></li>
+                <li><a href="terapistlerimiz.html">Terapistlerimiz</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Bize Ulaşın</h4>
+            <p>Hizmet bölgelerimiz, fiyat listemiz ve özel seanslar hakkında bilgi almak için bizimle doğrudan iletişime geçebilirsiniz.</p>
+            <a href="terapistlerimiz.html" class="btn btn-primary footer-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom text-center">
+        <div class="container">
+            <p>&copy; 2026 Aura Wellness. Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="terapistlerimiz.html" class="floating-whatsapp" aria-label="Terapistlerimiz Sayfası">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip-text">Canlı Destek & Randevu</span>
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.main-header');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    if(hamburger) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if(hamburger) hamburger.classList.remove('active');
+            if(navbar) navbar.classList.remove('active');
+        });
+    });
+});
+</script>
+</body>
+</html>
