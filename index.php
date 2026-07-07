@@ -1,3 +1,4 @@
+<?php include_once 'functions.php'; ?>
 <?php get_header(); ?>
 
 <!-- HERO SECTION -->

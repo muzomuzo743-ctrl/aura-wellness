@@ -1,4 +1,14 @@
 <?php
+// Vercel'in hata vermemesi için WordPress fonksiyonlarını taklit ediyoruz
+if (!function_exists('get_header')) {
+    function get_header() { include 'header.php'; }
+}
+if (!function_exists('get_footer')) {
+    function get_footer() { include 'footer.php'; }
+}
+if (!function_exists('get_sidebar')) {
+    function get_sidebar() { if(file_exists('sidebar.php')) include 'sidebar.php'; }
+}
 /**
  * Aura Wellness Tema Fonksiyonları
  */
