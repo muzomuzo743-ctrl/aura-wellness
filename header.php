@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Wellness</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php wp_head(); ?>
 </head>
-<body>
-<header class="site-header">
-    <nav class="nav-menu">
-        <a href="index.php">Ana Sayfa</a>
-        <a href="page-terapistler.php">Terapistlerimiz</a>
-    </nav>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header class="main-header">
+    <div class="container header-container">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+            <span class="logo-sub">AURA</span>
+            <span class="logo-main">WELLNESS</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.php#home" class="nav-link active">Anasayfa</a>
+            <a href="index.php#about" class="nav-link">Hakkımızda</a>
+            <a href="index.php#services" class="nav-link">Hizmetlerimiz</a>
+            <a href="page-terapistler.php" class="nav-link">Terapistlerimiz</a>
+            <a href="page-terapistler.php" class="btn nav-cta cta-btn">
+                <i class="fab fa-whatsapp"></i> Randevu Al
+            </a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Menüyü Aç">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
 </header>
